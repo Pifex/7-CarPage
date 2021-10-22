@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>7-CarPage</title>
+  <link rel="shortcut icon" type="image/jpg" href="/favicon.png"/>
+  <script type="module" src="./src/app.js"></script>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+
+<body>
+
+
+
+  <div class = cancion>
+  <embed src="/assets/Fireforyou.mp3" loop="true" autostart="true" width="0"
+         height="0">
+        </div>
+  <div id="renderScene">
+    <div id="contentModels">
+      <div class="btnOptionModels one" data-size="1">
+      </div>
+      <div class="btnOptionModels two" data-size="2">
+      </div>
+      <div class="btnOptionModels three" data-size="3">
+      </div>
+      <div class="btnOptionModels four" data-size="4">
+      </div>
+    </div>
+    <div id="contentTexture">
+      <div class="btnOptionTexture tone" data-name="material_0_baseColor">
+      </div>
+      <div class="btnOptionTexture ttwo" data-name="material_1_baseColor">
+      </div>
+      <div class="btnOptionTexture tthree" data-name="material_2_baseColor">
+      </div>
+    </div>
+  </div>
+  <div id="content">
+
+<div class = titulo>
+  <h1>Acerca De Nissan</h1>
+</div>
+
+<div class = subtitulo>
+  <h3>Innovacion para la emocion</h3>
+</div>
+
+<div class = informacion>
+  <p style="text-align:center;">La promesa de la marca es lo que representa Nissan.<br>Va mas alla de un simple mensaje
+   <br> - es el resultado final de todo lo que hace la empresa.</p>
+</div>
+
+<div class = logotipo>
+    <img src="/assets/logonissan.png" alt="Nissan Logo" width="200" height="200">
+</div>
+
+<div class ="cargif">
+</div>
+
+  <div class="nextbtn">
+<div class="title">Ver Catalogo</div>
+  </div>
+
+</div>
+
+  <script type="module">
+    import { main, changeModel, changeTexture} from './src/app.js';
+
+    const next = document.querySelector('.nextbtn');
+    const modeloptions = document.querySelectorAll('.btnOptionModels');
+    const textureoptions = document.querySelectorAll('.btnOptionTexture');
+    const content = document.querySelector('#content');
+    globalThis.model = 1;
+    
+    modeloptions.forEach(optionSelected => {
+      optionSelected.onclick = function(){
+        const optionModel = this.dataset.size;
+        model = optionModel;
+        changeModel(model);
+      }
+    });
+
+    textureoptions.forEach(optionSelected => {
+      optionSelected.onclick = function(){
+        const textureoptionTexture = this.dataset.name;
+        const texture = textureoptionTexture;
+        changeTexture(model,texture);
+      }
+    });
+
+    next.onclick = function() {
+      toogleContent();  
+      main();
+    }
+
+
+
+    function toogleContent (){
+      content.style.display = content.style.display == 'none' ? 'flex' : 'none';
+    }
+  </script>
+</body>
+
+</html>
+

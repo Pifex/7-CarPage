@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url(//db.onlinewebfonts.com/c/50f52473935f8429cfeebbc78d5b996d?family=Nissan+Brand+W10+Bold);
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.cargif{
+ min-height: 100vh;
+ width: 100%;
+ background-color: #000000;
+ background-image: url(https://media.giphy.com/media/elJ5IaOcpGvYyWkplJ/giphy-downsized-large.gif);   
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 100%;
+ color: #ffffff;
+ padding: 0 8%;
+ z-index:-1;
+ position: absolute;
+ filter: brightness(30%)
+}
+.cancion{
+ min-height: 100vh;
+ width: 100%; 
+ background-position: center;
+ background-repeat: no-repeat;
+ background-size: 100%;
+ color: #ffffff;
+ padding: 0 8%;
+ z-index:-1;
+ position: absolute;
+}
+.logotipo{
+    position: absolute;
+    right: 85%;
+    bottom: 75%; 
+}
+
+.titulo{
+  font-family: "Nissan Brand W10 Bold";
+  font-weight: 400;
+  font-size: 200%;
+  margin: 0;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+.subtitulo{
+  font-family: "Nissan Brand W10 Bold";
+  font-weight: 400;
+  font-size: 100%;
+  margin: 0;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+.informacion{
+  font-family: "Nissan Brand W10 Bold";
+  font-weight: 400;
+  font-size: 150%;
+  margin: 0;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #ffffff;
+}
+
+body #contentModels {
+  display: flex;
+  position: fixed;
+  background: #dddddd;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  right: 0;
+  z-index: 2;
+  width: 20vw;
+  height: 100vh;
+  filter:brightness(100%)
+}
+
+body #contentModels .btnOptionModels {
+  border: 3px solid #000000;
+  width: 15vw;
+  height: 150vh;
+  margin: 2vw;
+  border-radius: 15px;
+  padding: 15px;
+  color: rgb(0, 0, 0);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+.one{
+background-image: url(https://cdnb.artstation.com/p/assets/images/images/008/436/151/large/karol-miklas-1.jpg?1512750331);
+background-position: center;
+background-size: 130%;
+}
+
+.two{
+  background-image: url(https://cdnb.artstation.com/p/assets/images/images/000/399/123/large/karol-miklas-1.jpg?1420934930);
+  background-position: center;
+  background-size: 130%;
+}
+
+.three{
+background-image: url(https://files.porsche.com/filestore/image/multimedia/none/992-c2s-modelimage-sideshot/model/b70ce2b2-d97f-11eb-80d9-005056bbdc38/porsche-model.png);
+background-position: center;
+background-size: 100%;
+}
+
+.four{
+background-image: url(https://acroadtrip.blob.core.windows.net/catalogo-imagenes/m/RT_V_2ec11609287d4ea6980b5027327a8015.jpg);
+background-position: center;
+background-size: 100%;  
+}
+
+.tone{
+  background-image: url(https://previews.123rf.com/images/zmkstudio/zmkstudio1101/zmkstudio110100035/8610774-fondo-de-textura-de-papel-peri%C3%A3%C2%B3dicos.jpg  );
+  background-position: center;
+  background-size: 130%;
+  }
+  
+  .ttwo{
+    background-image: url(http://open-chapel.com/wp-content/uploads/2017/12/blue-great-texture-background.jpg);
+    background-position: center;
+    background-size: 130%;
+  }
+  
+  .tthree{
+  background-image: url(https://i.pinimg.com/originals/90/13/ec/9013ecef72e6db6e93252f38f46d2753.jpg);
+  background-position: center;
+  background-size: 100%;
+  }
+body #contentModels .btnOptionModels:hover {
+  width: 17vw;
+}
+
+body #contentTexture {
+  display: flex;
+  position: fixed;
+  background: #00000000;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  z-index: 2;
+  width: 80vw;
+  height: 10vh;
+}
+
+body #contentTexture .btnOptionTexture {
+  border: 3px solid #000000;
+  width: 10vw;
+  height: 8vh;
+  margin: 2vw;
+  border-radius: 15px;
+  padding: 15px;
+  color: white;
+  display:flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position:static;
+  cursor: pointer;
+  transition: all 0.6s ease;
+}
+
+body #contentTexture .btnOptionTexture:hover {
+  width: 11vw;
+}
+
+
+body #renderScene {
+  display: flex;
+  position: fixed;
+  flex-flow: column wrap;
+  padding: 10px;
+  z-index: 1;
+}
+
+
+
+body #content {
+  display: flex;
+  position: fixed;
+  background: #bfe3dd;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+}
+
+body #content .nextbtn {
+  font-family: "Nissan Brand W10 Bold";
+  border: 1px solid #ffffff;
+  width: 10vw;
+  height: 6vh;
+  margin: 0vw;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background-blend-mode: screen;
+  background: #000000;
+  transition: all 0.4s ease;
+}
+
+body #content .nextbtn:hover {
+  width: 11vw;
+}
+
+body #content .nextbtn .title {
+  font-size: 110%;
+  margin-bottom: 2px;
+}
+
